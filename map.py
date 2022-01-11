@@ -20,7 +20,7 @@ print(lat)
 #long=[-34.9082027,3.001217,34.811026]
 
 world = folium.Map(
-    zoom_start=2,
+    zoom_start=3,
     location=[13.133932434766733, 16.103938729508073])
 
 
@@ -29,4 +29,4 @@ for i in range(len(lat)):
 
 
 folium.Polygon(locations=points, color='#FF0000', fill_color='blue', weight=5).add_to(world)
-world
+world.save("map.html")
